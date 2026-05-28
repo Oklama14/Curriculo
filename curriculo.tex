@@ -1,0 +1,160 @@
+
+% Início do documento LaTeX: define tipo e formato do documento
+% a4paper = tamanho A4, 10pt = tamanho base da fonte
+\documentclass[a4paper,10pt]{article}
+
+% --- PACOTES ---
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[portuguese]{babel}
+\usepackage{geometry}
+\usepackage{parskip}
+\usepackage{hyperref}
+\usepackage{titlesec}
+% Para quebras de linha em URLs longas (não use \href{}, use \url{} para URLs longas)
+% \usepackage{xurl}
+
+% --- CONFIGURAÇÃO DO DOCUMENTO ---
+% Define margens da página para maximizar espaço de conteúdo
+\geometry{top=1.0cm, bottom=1.0cm, left=1.0cm, right=1.0cm}
+
+% Remove números de página e cabeçalhos para visual limpo do currículo
+\pagestyle{empty}
+
+% Metadados do PDF - personalize com suas informações
+\hypersetup{
+    pdftitle={CV Arthur Chaves Sousa - QA Analyst},
+    pdfauthor={Arthur Chaves Sousa},
+    colorlinks=true,
+    linkcolor=black,
+    urlcolor=black,
+    citecolor=black,
+    bookmarksdepth=1 
+}
+
+% Desabilita numeração das sections
+\setcounter{secnumdepth}{0}
+
+% Formata os cabeçalhos de cada section e coloca uma linha em baixo
+\titleformat{\section}
+{\Large\bfseries}
+{}
+{0em}
+{}
+[\titlerule\vspace{0.5ex}]
+
+% --- INÍCIO DO DOCUMENTO ---
+\begin{document}
+
+% --- CABEÇALHO ---
+\begin{center}
+    {\LARGE \textbf{Arthur Chaves Sousa}} 
+    \\ [0.1cm]
+    Porto Alegre/RS - Brasil
+    {\textbullet}
+    Email: \href{mailto:artcs2003@gmail.com}{artcs2003@gmail.com} 
+    {\textbullet}
+    \href{https://www.linkedin.com/in/artcs14}{LinkedIn} 
+    {\textbullet}
+    +55 55 99181-9493
+\end{center}
+
+% --- SEÇÕES ---
+
+\section{Experiência}
+    \subsection*{\texorpdfstring{
+            \textbf{SegDev | Tecnologia em Seguros} \hfill Remoto
+        }{
+            Segdev | Tecnologia em Seguros -- Remoto
+        }}
+    \textit{Analista de QA \hfill Novembro 2025 - Presente}
+        \begin{itemize}
+            \item Executei testes funcionais, de regressão e exploratórios em aplicações web e APIs REST, identificando e documentando bugs que impactavam a experiência do usuário
+            \item Elaborei e mantive casos de teste detalhados e planos de teste baseados em requisitos funcionais e técnicos, garantindo cobertura abrangente das funcionalidades do sistema
+            \item Colaborei com desenvolvedores e product owners em metodologia ágil  para análise de requisitos, refinamento de UX e validação de critérios de aceite
+            \item Realizei testes de API utilizando ferramentas como Postman e Cypress, validando respostas HTTP, payloads JSON e integração entre microsserviços
+            \item Documentei evidências de testes, reportei defeitos e participei ativamente de cerimônias ágeis (dailies, planning, retrospectivas)
+            \item Validei correções de bugs e realizei smoke tests em ambientes de homologação antes do deploy em produção
+        \end{itemize}
+
+    \subsection*{\texorpdfstring{
+            \textbf{Gama-log Solução em Comércio Exterior LTDA} \hfill São Borja/RS
+        }{
+            Gama-log Solução em Comércio Exterior LTDA -- São Borja
+        }}
+    \textit{Analista de Sistemas Jr. / Analista de Importação Pleno \hfill Fevereiro 2022 - Outubro 2025}
+        \begin{itemize}
+            \item Responsável pelo desenvolvimento completo do website corporativo, incluindo levantamento de requisitos junto aos stakeholders, análise e mapeamento de processos de negócio, aplicação de metodologias ágeis para gestão do projeto, suporte e manutenção de sistemas informatizados alinhando necessidades do negócio aos padrões tecnológicos, e elaboração de documentação técnica e especificações de sistema.
+        \end{itemize}
+
+    \subsection*{\texorpdfstring{
+            \textbf{SB Despachos Aduaneiros} \hfill São Borja/RS
+        }{
+            SB Despachos Aduaneiros -- São Borja
+        }}
+    \textit{Auxiliar Administrativo \hfill Novembro 2021 - Abril 2022}
+        \begin{itemize}
+            \item Auxiliei na emissão e validação de documentos de transporte internacional (MIC/CRT), garantindo conformidade com regulamentações aduaneiras
+        \end{itemize}
+
+    \subsection*{\texorpdfstring{
+            \textbf{KR Logística Internacional} \hfill São Borja/RS
+        }{
+            KR Logística Internacional -- São Borja
+        }}
+    \textit{Auxiliar Executivo \hfill Novembro 2020 - Novembro 2021}
+        \begin{itemize}
+            \item Liderei equipe operacional responsável por emissão de documentação de transporte internacional (MIC/CRT/DTA/DU-e)
+            \item Desenvolvi relatórios de acompanhamento operacional (follow-up) para clientes, melhorando comunicação e rastreabilidade de processos
+        \end{itemize}
+
+% ------
+
+\section{Habilidades}
+    \begin{itemize}
+        \item \textbf{QA \& Testing:} Testes funcionais, testes de regressão, testes exploratórios, testes de API, smoke testing, elaboração de casos de teste, documentação de bugs, rastreabilidade de requisitos
+        \item \textbf{Ferramentas de QA:} Postman, Insomnia, ferramentas de bug tracking, sistemas de gestão de testes
+        \item \textbf{Metodologias:} Scrum, Kanban, metodologias ágeis, ITIL
+        \item \textbf{Análise de Sistemas:} Levantamento de requisitos, documentação técnica, modelagem de processos, análise de negócios, casos de uso, UML
+        \item \textbf{Programação:} Python, SQL (PostgreSQL, MySQL), JavaScript, desenvolvimento web
+        \item \textbf{Ferramentas Técnicas:} Git, GitHub, Excel avançado, Power BI
+        \item \textbf{Data Science \& ML:} Machine Learning aplicado, análise de dados, ciência de dados com Python
+        \item \textbf{Soft Skills:} Pensamento analítico, resolução de problemas, comunicação técnica eficaz, trabalho em equipe, proatividade, atenção aos detalhes
+        \item \textbf{Idiomas:} Português (Nativo), Inglês (Profissional Completo - B1), Espanhol (Básico - A2)
+    \end{itemize}
+
+% ------
+
+\section{Educação}
+
+     \subsection*{\texorpdfstring{
+            \textbf{Pontifícia Universidade Católica do Rio Grande do Sul (PUCRS)} \hfill Porto Alegre/RS
+        }{
+            Pontifícia Universidade Católica do Rio Grande do Sul (PUCRS) -- Porto Alegre
+        }}
+    \textit{Mestrado em Ciência da Computação \hfill 2026 - Presente (em andamento)}
+    
+    \subsection*{\texorpdfstring{
+            \textbf{Instituto Federal Farroupilha - Campus São Borja} \hfill São Borja/RS}{Instituto Federal Farroupilha - Campus São Borja -- São Borja}}
+    \textit{Bacharelado em Sistemas de Informação \hfill Fevereiro 2022 - Dezembro 2025}
+
+    \subsection*{\texorpdfstring{
+            \textbf{Instituto Federal Farroupilha - Campus São Borja} \hfill São Borja/RS
+        }{
+            Instituto Federal Farroupilha - Campus São Borja -- São Borja
+        }}
+    \textit{Técnico em Informática - Integrado ao Ensino Médio \hfill Fevereiro 2018 - Dezembro 2020}
+
+% ------
+
+\section{Certificações}
+    \begin{itemize}
+        \item \textbf{Machine Learning with Python} - FreeCodeCamp
+        \item \textbf{Ciência de Dados com Python} - DIO
+        \item \textbf{Elements of AI} - University of Helsinki
+        \item \textbf{Projetos de Sistemas de TI} - Fundação Bradesco
+        \item \textbf{Mastering System Request Document System Analysis \& Design} - Udemy
+        \item \textbf{Excel 2016 Avançado} - Fundação Bradesco
+    \end{itemize}
+
+\end{document}

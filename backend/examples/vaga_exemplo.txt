@@ -1,0 +1,43 @@
+Analista de QA Pleno — Porto Alegre/RS (Remoto)
+
+Empresa: TechSolutions Brasil
+
+Sobre a vaga:
+Buscamos um Analista de QA Pleno para integrar nossa squad de pagamentos digitais. O profissional será responsável por garantir a qualidade de nossas APIs REST e aplicações web, atuando com testes manuais e automatizados em um ambiente ágil.
+
+Responsabilidades:
+- Planejar e executar testes funcionais, de regressão, integração e performance em APIs REST e aplicações web
+- Desenvolver e manter scripts de testes automatizados utilizando Cypress, Selenium ou Playwright
+- Validar integrações entre microsserviços e gateways de pagamento
+- Documentar casos de teste, cenários de teste e evidências de execução
+- Participar ativamente de cerimônias ágeis (Daily, Planning, Review e Retrospectiva)
+- Realizar testes de API com Postman/Insomnia, validando contratos, payloads JSON e status HTTP
+- Identificar, registrar e acompanhar bugs no Jira, com evidências claras e reprodutíveis
+- Colaborar com desenvolvedores e POs na definição de critérios de aceite e refinamento de requisitos
+- Executar smoke tests e testes de sanidade em ambientes de staging e produção
+- Contribuir com a melhoria contínua dos processos de QA
+
+Requisitos:
+- Experiência comprovada como QA Analyst (mínimo 2 anos)
+- Conhecimento sólido em testes de API (Postman, Insomnia)
+- Experiência com metodologias ágeis (Scrum/Kanban)
+- Conhecimento em SQL para validação de dados
+- Familiaridade com ferramentas de versionamento (Git)
+- Capacidade de documentação técnica clara e objetiva
+- Pensamento analítico e atenção aos detalhes
+
+Diferenciais:
+- Experiência com automação de testes (Cypress, Playwright, Selenium)
+- Conhecimento em CI/CD (Jenkins, GitHub Actions)
+- Experiência com testes de performance (JMeter, k6)
+- Familiaridade com Docker e ambientes containerizados
+- Conhecimento em Python para scripts de teste
+- Certificação ISTQB ou similar
+- Experiência no setor financeiro/fintech
+
+Benefícios:
+- Trabalho 100% remoto
+- Vale alimentação/refeição
+- Plano de saúde e odontológico
+- Day off no aniversário
+- Budget para cursos e certificações
