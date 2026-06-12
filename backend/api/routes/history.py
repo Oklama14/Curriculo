@@ -1,5 +1,5 @@
 """
-history.py — Rota para obter o histórico de execuções do Resume Tailor.
+history.py — Rota para obter o histórico de execuções do TailorCV.
 """
 
 import logging

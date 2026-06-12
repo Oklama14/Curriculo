@@ -1,6 +1,6 @@
-# AI Resume Tailor & Job Scraper — Developer Guide (CLAUDE.md)
+# TailorCV — Developer Guide (CLAUDE.md)
 
-Este documento contém as diretrizes de desenvolvimento, arquitetura do sistema, comandos comuns de execução, testes e regras críticas de negócio para o projeto **AI Resume Tailor & Job Scraper**.
+Este documento contém as diretrizes de desenvolvimento, arquitetura do sistema, comandos comuns de execução, testes e regras críticas de negócio para o projeto **TailorCV**.
 
 ---
 

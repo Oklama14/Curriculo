@@ -59,7 +59,7 @@ class _MainLayoutState extends State<MainLayout> with SingleTickerProviderStateM
 
     final List<Map<String, dynamic>> menuItems = [
       {'icon': Icons.space_dashboard_outlined, 'label': 'Painel Principal'},
-      {'icon': Icons.psychology_outlined, 'label': 'Resume Tailoring'},
+      {'icon': Icons.psychology_outlined, 'label': 'TailorCVing'},
       {'icon': Icons.upload_file_rounded, 'label': 'Meu Currículo'},
       {'icon': Icons.history_edu_outlined, 'label': 'Histórico'},
       {'icon': Icons.work_outline_outlined, 'label': 'Vagas Coletadas'},

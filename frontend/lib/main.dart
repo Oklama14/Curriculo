@@ -45,7 +45,7 @@ class _MyAppState extends State<MyApp> {
       animation: _appState,
       builder: (context, child) {
         return MaterialApp(
-          title: 'AI Resume Tailor & Job Scraper',
+          title: 'TailorCV',
           debugShowCheckedModeBanner: false,
           theme: AmethystTheme.themeData,
           home: _appState.isAuthenticated

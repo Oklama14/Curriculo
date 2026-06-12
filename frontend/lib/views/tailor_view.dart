@@ -127,7 +127,7 @@ class _TailorViewState extends State<TailorView> with SingleTickerProviderStateM
       children: [
         // Título da Página
         Text(
-          'Resume Tailoring Workspace',
+          'TailorCVing Workspace',
           style: Theme.of(context).textTheme.displayLarge?.copyWith(
                 fontSize: 28,
                 color: Colors.white,

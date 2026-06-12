@@ -1,4 +1,4 @@
-# AI Resume Tailor & Job Scraper 🤖📄
+# TailorCV 🤖📄
 
 Uma plataforma automatizada pessoal para otimização de currículos e coleta de vagas de emprego. O sistema analisa descrições de vagas recolhidas via Web Scraping (LinkedIn/Gupy) ou fornecidas manualmente, e utiliza a Inteligência Artificial do Google Gemini para reescrever as experiências e enfatizar palavras-chave do currículo original (escrito em LaTeX), maximizando a compatibilidade com sistemas ATS (*Applicant Tracking Systems*).
 

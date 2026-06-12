@@ -84,7 +84,7 @@ class _LoginViewState extends State<LoginView> {
                       
                       // App Name
                       Text(
-                        'Resume Tailor',
+                        'TailorCV',
                         style: Theme.of(context).textTheme.displayMedium?.copyWith(
                           color: AmethystTheme.textPrimary,
                           fontWeight: FontWeight.w900,
