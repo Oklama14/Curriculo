@@ -45,7 +45,7 @@ class _MyAppState extends State<MyApp> {
       animation: _appState,
       builder: (context, child) {
         return MaterialApp(
-          title: 'TailorCV',
+          title: 'TailorCV_ACS',
           debugShowCheckedModeBanner: false,
           theme: AmethystTheme.themeData,
           home: _appState.isAuthenticated

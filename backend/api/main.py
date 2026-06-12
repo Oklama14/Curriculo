@@ -1,5 +1,5 @@
 """
-main.py — Ponto de entrada da API FastAPI para o TailorCV.
+main.py — Ponto de entrada da API FastAPI para o TailorCV_ACS.
 Configura o app, CORS, monta arquivos estáticos e inclui as rotas.
 """
 
@@ -32,7 +32,7 @@ from .middleware.auth_middleware import FirebaseAuthMiddleware
 
 # Inicializa o FastAPI
 app = FastAPI(
-    title="TailorCV API",
+    title="TailorCV_ACS API",
     description="Backend API para otimização de currículos baseados em LaTeX usando Google Gemini.",
     version="1.0.0",
 )
@@ -82,7 +82,7 @@ def read_root():
     """Endpoint de checagem de saúde da API."""
     return {
         "status": "online",
-        "service": "TailorCV API",
+        "service": "TailorCV_ACS API",
         "version": "1.0.0",
         "documentation": "/docs"
     }

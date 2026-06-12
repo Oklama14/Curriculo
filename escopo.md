@@ -1,4 +1,4 @@
-# Projeto: TailorCV
+# Projeto: TailorCV_ACS
 
 ## 1. Visão Geral
 Plataforma pessoal automatizada para otimização de currículos. O sistema analisa descrições de vagas e utiliza Inteligência Artificial para reescrever *bullet points* e ajustar *keywords* do currículo original (escrito em LaTeX). O objetivo é aumentar a taxa de conversão em *Applicant Tracking Systems* (ATS), sem inventar ou falsificar experiências. A plataforma também contará com um *scraper* ativo para buscar vagas compatíveis.

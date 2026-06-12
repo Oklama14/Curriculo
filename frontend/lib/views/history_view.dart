@@ -142,7 +142,7 @@ class _HistoryViewState extends State<HistoryView> {
               ),
               const SizedBox(height: 12),
               Text(
-                'Você ainda não executou o otimizador para nenhuma vaga. Acesse a aba "TailorCVing" para começar!',
+                'Você ainda não executou o otimizador para nenhuma vaga. Acesse a aba "TailorCV_ACSing" para começar!',
                 textAlign: TextAlign.center,
                 style: TextStyle(color: AmethystTheme.textSecondary, fontSize: 13, height: 1.5),
               ),

@@ -1,5 +1,5 @@
 """
-__main__.py — Ponto de entrada CLI para a PoC do TailorCV.
+__main__.py — Ponto de entrada CLI para a PoC do TailorCV_ACS.
 
 Uso:
     python -m backend.core --job "descrição da vaga"
@@ -31,7 +31,7 @@ def setup_logging(verbose: bool = False) -> None:
 
 def main():
     parser = argparse.ArgumentParser(
-        description="TailorCV — Otimiza seu currículo LaTeX para vagas específicas usando IA",
+        description="TailorCV_ACS — Otimiza seu currículo LaTeX para vagas específicas usando IA",
         formatter_class=argparse.RawDescriptionHelpFormatter,
         epilog="""
 Exemplos:
@@ -119,7 +119,7 @@ Exemplos:
     # Executa o tailoring
     print()
     print("╔══════════════════════════════════════════════════════════════╗")
-    print("║            🤖  TailorCV — PoC v1.0                 ║")
+    print("║            🤖  TailorCV_ACS — PoC v1.0                 ║")
     print("╚══════════════════════════════════════════════════════════════╝")
     print()
 

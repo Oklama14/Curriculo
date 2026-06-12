@@ -1,6 +1,6 @@
-# TailorCV — Developer Guide (CLAUDE.md)
+# TailorCV_ACS — Developer Guide (CLAUDE.md)
 
-Este documento contém as diretrizes de desenvolvimento, arquitetura do sistema, comandos comuns de execução, testes e regras críticas de negócio para o projeto **TailorCV**.
+Este documento contém as diretrizes de desenvolvimento, arquitetura do sistema, comandos comuns de execução, testes e regras críticas de negócio para o projeto **TailorCV_ACS**.
 
 ---
 

@@ -1,5 +1,5 @@
 """
-history.py — Rota para obter o histórico de execuções do TailorCV.
+history.py — Rota para obter o histórico de execuções do TailorCV_ACS.
 """
 
 import logging
