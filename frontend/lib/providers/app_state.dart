@@ -121,7 +121,7 @@ class AppState extends ChangeNotifier {
   void selectJobForApply(ScrapedJob job) {
     _applyJob = job;
     _lastApplyPrepareResponse = null;
-    _currentTabIndex = 5; // Vai para a aba Candidatar-se
+    _currentTabIndex = 6; // Vai para a aba Candidatar-se
     notifyListeners();
   }
 
@@ -316,11 +316,97 @@ class AppState extends ChangeNotifier {
     }
   }
 
+  // ══════════════════════════════════════════════════════
+  // Estado do Currículo Base (.tex)
+  // ══════════════════════════════════════════════════════
+
+  Map<String, dynamic>? _resumeInfo;
+  Map<String, dynamic>? get resumeInfo => _resumeInfo;
+
+  String? _resumePreview;
+  String? get resumePreview => _resumePreview;
+
+  bool _isLoadingResume = false;
+  bool get isLoadingResume => _isLoadingResume;
+
+  bool _isUploadingResume = false;
+  bool get isUploadingResume => _isUploadingResume;
+
+  String? _resumeError;
+  String? get resumeError => _resumeError;
+
+  String? _resumeUploadSuccess;
+  String? get resumeUploadSuccess => _resumeUploadSuccess;
+
+  // Carrega informações do currículo atual
+  Future<void> loadResumeInfo() async {
+    _isLoadingResume = true;
+    _resumeError = null;
+    notifyListeners();
+
+    try {
+      _resumeInfo = await _apiService.fetchResumeInfo();
+    } catch (e) {
+      _resumeError = e.toString().replaceAll('Exception: ', '');
+    } finally {
+      _isLoadingResume = false;
+      notifyListeners();
+    }
+  }
+
+  // Carrega o preview do conteúdo .tex
+  Future<void> loadResumePreview() async {
+    _isLoadingResume = true;
+    _resumeError = null;
+    notifyListeners();
+
+    try {
+      _resumePreview = await _apiService.fetchResumePreview();
+    } catch (e) {
+      _resumeError = e.toString().replaceAll('Exception: ', '');
+    } finally {
+      _isLoadingResume = false;
+      notifyListeners();
+    }
+  }
+
+  // Faz upload de um novo currículo .tex
+  Future<bool> uploadResume(List<int> fileBytes, String fileName) async {
+    _isUploadingResume = true;
+    _resumeError = null;
+    _resumeUploadSuccess = null;
+    notifyListeners();
+
+    try {
+      final result = await _apiService.uploadResume(fileBytes, fileName);
+      _resumeUploadSuccess = result['message'] ?? 'Upload realizado com sucesso!';
+      // Recarrega as informações e o preview
+      await loadResumeInfo();
+      await loadResumePreview();
+      return true;
+    } catch (e) {
+      _resumeError = e.toString().replaceAll('Exception: ', '');
+      return false;
+    } finally {
+      _isUploadingResume = false;
+      notifyListeners();
+    }
+  }
+
+  // Limpa o feedback de upload
+  void clearResumeMessages() {
+    _resumeError = null;
+    _resumeUploadSuccess = null;
+    notifyListeners();
+  }
+
   // Função utilitária para carregar tudo (usada no bootstrap do app)
   Future<void> loadAll() async {
     await Future.wait([
       loadJobs(),
       loadHistory(),
+      loadResumeInfo(),
     ]);
   }
 }
+

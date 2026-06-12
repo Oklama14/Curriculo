@@ -27,7 +27,7 @@ if env_path.exists():
 else:
     load_dotenv()
 
-from .routes import tailor, jobs, history, profile, apply
+from .routes import tailor, jobs, history, profile, apply, resume
 from .middleware.auth_middleware import FirebaseAuthMiddleware
 
 # Inicializa o FastAPI
@@ -65,6 +65,7 @@ app.include_router(jobs.router, prefix="/api/v1/jobs", tags=["Scraper / Vagas"])
 app.include_router(history.router, prefix="/api/v1/history", tags=["Histórico"])
 app.include_router(profile.router, prefix="/api/v1/profile", tags=["Perfil"])
 app.include_router(apply.router, prefix="/api/v1/apply", tags=["Candidatura"])
+app.include_router(resume.router, prefix="/api/v1/resume", tags=["Currículo Base"])
 
 
 @app.get("/api/v1/auth/me")

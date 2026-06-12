@@ -203,4 +203,84 @@ class ApiService {
       throw Exception('Erro de conexão ao preparar candidatura: $e');
     }
   }
+
+  // POST /api/v1/resume/upload - Upload de currículo LaTeX (.tex)
+  Future<Map<String, dynamic>> uploadResume(List<int> fileBytes, String fileName) async {
+    try {
+      final uri = Uri.parse('$baseUrl/api/v1/resume/upload');
+      final request = http.MultipartRequest('POST', uri);
+
+      // Adiciona headers de autenticação
+      final token = await AuthService().idToken;
+      if (token != null) {
+        request.headers['Authorization'] = 'Bearer $token';
+      }
+      if (apiKey != null && apiKey!.isNotEmpty) {
+        request.headers['X-API-Key'] = apiKey!;
+      }
+
+      // Adiciona o arquivo
+      request.files.add(http.MultipartFile.fromBytes(
+        'file',
+        fileBytes,
+        filename: fileName,
+      ));
+
+      final streamedResponse = await request.send();
+      final response = await http.Response.fromStream(streamedResponse);
+
+      if (response.statusCode == 200) {
+        return json.decode(utf8.decode(response.bodyBytes));
+      } else {
+        final errJson = json.decode(utf8.decode(response.bodyBytes));
+        final errMsg = errJson['detail'] ?? 'Erro ao fazer upload';
+        throw Exception(errMsg);
+      }
+    } catch (e) {
+      if (e is Exception && e.toString().contains('Exception:')) {
+        rethrow;
+      }
+      throw Exception('Erro de conexão ao enviar currículo: $e');
+    }
+  }
+
+  // GET /api/v1/resume/current - Obtém informações do currículo atual
+  Future<Map<String, dynamic>> fetchResumeInfo() async {
+    try {
+      final response = await http.get(
+        Uri.parse('$baseUrl/api/v1/resume/current'),
+        headers: await _getHeaders(),
+      );
+
+      if (response.statusCode == 200) {
+        return json.decode(utf8.decode(response.bodyBytes));
+      } else if (response.statusCode == 404) {
+        return {'exists': false};
+      } else {
+        throw Exception('Falha ao obter info do currículo: Status ${response.statusCode}');
+      }
+    } catch (e) {
+      throw Exception('Erro de conexão ao buscar currículo: $e');
+    }
+  }
+
+  // GET /api/v1/resume/preview - Obtém o conteúdo .tex para preview
+  Future<String> fetchResumePreview() async {
+    try {
+      final response = await http.get(
+        Uri.parse('$baseUrl/api/v1/resume/preview'),
+        headers: await _getHeaders(),
+      );
+
+      if (response.statusCode == 200) {
+        final data = json.decode(utf8.decode(response.bodyBytes));
+        return data['content'] ?? '';
+      } else {
+        throw Exception('Falha ao obter preview: Status ${response.statusCode}');
+      }
+    } catch (e) {
+      throw Exception('Erro de conexão ao buscar preview: $e');
+    }
+  }
 }
+

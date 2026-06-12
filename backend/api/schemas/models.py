@@ -96,3 +96,27 @@ class ApplyPrepareResponse(BaseModel):
     company: str
     profile: ApplyProfileInfo
     checklist: List[str]
+
+
+class ResumeUploadResponse(BaseModel):
+    """Resposta após upload bem-sucedido do currículo .tex."""
+    success: bool
+    filename: str = Field(..., description="Nome original do arquivo enviado.")
+    size_bytes: int = Field(..., description="Tamanho do arquivo em bytes.")
+    sections_found: List[str] = Field(
+        default_factory=list,
+        description="Seções LaTeX detectadas no currículo (ex: Experiência, Habilidades)."
+    )
+    message: str = Field(..., description="Mensagem de confirmação.")
+
+
+class ResumeInfoResponse(BaseModel):
+    """Informações sobre o currículo base atualmente carregado."""
+    filename: str = Field(..., description="Nome do arquivo .tex.")
+    size_bytes: int = Field(..., description="Tamanho do arquivo em bytes.")
+    sections_found: List[str] = Field(
+        default_factory=list,
+        description="Seções LaTeX detectadas."
+    )
+    modified_at: str = Field(..., description="Data da última modificação (ISO 8601).")
+    exists: bool = Field(True, description="Se o arquivo existe no sistema.")

@@ -90,7 +90,7 @@ class _ApplyViewState extends State<ApplyView> {
                   IconButton(
                     icon: const Icon(Icons.arrow_back, color: AmethystTheme.accentAmethyst),
                     onPressed: () {
-                      state.setTab(3); // Volta para vagas coletadas
+                      state.setTab(4); // Volta para vagas coletadas
                     },
                   ),
                   const SizedBox(width: 8),
@@ -436,7 +436,7 @@ class _ApplyViewState extends State<ApplyView> {
                         const SizedBox(height: 24),
                         ElevatedButton(
                           onPressed: () {
-                            state.setTab(3); // Vai para vagas
+                            state.setTab(4); // Vai para vagas
                           },
                           child: const Text('BUSCAR VAGAS'),
                         ),

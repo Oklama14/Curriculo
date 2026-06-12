@@ -124,7 +124,18 @@ class DashboardView extends StatelessWidget {
                       subtitle: 'Cole links do LinkedIn ou Gupy para extrair automaticamente título, empresa e requisitos da vaga.',
                       icon: Icons.link,
                       gradient: AmethystTheme.energyGradient,
-                      onTap: () => state.setTab(3),
+                      onTap: () => state.setTab(4),
+                    ),
+                    const SizedBox(height: 16),
+                    _buildQuickActionCard(
+                      context,
+                      title: 'Gerenciar Currículo LaTeX',
+                      subtitle: 'Faça upload do seu arquivo .tex para personalizar o sistema com seu currículo.',
+                      icon: Icons.upload_file_rounded,
+                      gradient: const LinearGradient(
+                        colors: [Color(0xFF00B4D8), AmethystTheme.accentIndigo],
+                      ),
+                      onTap: () => state.setTab(2),
                     ),
                     const SizedBox(height: 16),
                     _buildQuickActionCard(
@@ -135,7 +146,7 @@ class DashboardView extends StatelessWidget {
                       gradient: const LinearGradient(
                         colors: [AmethystTheme.accentAmethyst, Color(0xFF6B21A8)],
                       ),
-                      onTap: () => state.setTab(4),
+                      onTap: () => state.setTab(5),
                     ),
                   ],
                 ),
@@ -159,7 +170,7 @@ class DashboardView extends StatelessWidget {
                           ),
                         ),
                         TextButton(
-                          onPressed: () => state.setTab(2),
+                          onPressed: () => state.setTab(3),
                           child: const Text(
                             'Ver todas',
                             style: TextStyle(color: AmethystTheme.accentAmethyst),
@@ -384,7 +395,7 @@ class DashboardView extends StatelessWidget {
                 ),
                 onTap: () {
                   // Navega para aba do histórico
-                  state.setTab(2);
+                  state.setTab(3);
                 },
               ),
               if (item != recentList.last)

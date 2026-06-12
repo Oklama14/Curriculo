@@ -4,6 +4,7 @@ import '../providers/app_state.dart';
 import '../services/auth_service.dart';
 import 'dashboard_view.dart';
 import 'tailor_view.dart';
+import 'resume_view.dart';
 import 'history_view.dart';
 import 'jobs_view.dart';
 import 'profile_view.dart';
@@ -49,6 +50,7 @@ class _MainLayoutState extends State<MainLayout> with SingleTickerProviderStateM
     final List<Widget> views = [
       DashboardView(state: state),
       TailorView(state: state),
+      ResumeView(state: state),
       HistoryView(state: state),
       JobsView(state: state),
       ProfileView(state: state),
@@ -58,6 +60,7 @@ class _MainLayoutState extends State<MainLayout> with SingleTickerProviderStateM
     final List<Map<String, dynamic>> menuItems = [
       {'icon': Icons.space_dashboard_outlined, 'label': 'Painel Principal'},
       {'icon': Icons.psychology_outlined, 'label': 'Resume Tailoring'},
+      {'icon': Icons.upload_file_rounded, 'label': 'Meu Currículo'},
       {'icon': Icons.history_edu_outlined, 'label': 'Histórico'},
       {'icon': Icons.work_outline_outlined, 'label': 'Vagas Coletadas'},
       {'icon': Icons.person_outline, 'label': 'Meu Perfil'},
