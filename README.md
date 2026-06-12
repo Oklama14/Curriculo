@@ -12,6 +12,7 @@ Tudo isso é feito respeitando a **Regra de Ouro**: **Zero Alucinação** (sem i
 * **Compilação Segura de PDF**: Compilação local automatizada usando `pdflatex` via subprocesso em container isolado Docker.
 * **Scraper Integrado**: Coleta automatizada de vagas (LinkedIn e Gupy) usando Playwright Stealth para obter descrições completas e detalhadas de requisitos.
 * **Visualização de Diff Interativa**: Comparativo em tempo real (versão original vs. otimizada) antes de decidir compilar o arquivo final.
+* **Upload Dinâmico de Currículo**: Qualquer usuário pode fazer o upload do seu próprio arquivo `.tex` pela interface web para utilizá-lo como o currículo base em tempo real.
 * **Firebase com Fallback Local**: Login de usuários e persistência do histórico com Firebase Auth/Firestore/Storage. Se as chaves não estiverem configuradas, o sistema degrada graciosamente para salvar os dados localmente em arquivos JSON.
 * **Interface "Dark Amethyst"**: UI moderna e fluida desenvolvida em Flutter Web com estética escura premium, efeitos de Glassmorphism e layouts responsivos de split-view.
 
@@ -30,7 +31,7 @@ Tudo isso é feito respeitando a **Regra de Ouro**: **Zero Alucinação** (sem i
 
 ```text
 Projeto Currículo/
-├── curriculo.tex            # Currículo base do usuário (Source of Truth)
+├── curriculo.tex            # Currículo base atual (pode ser sobrescrito via upload na UI)
 ├── escopo.md                # Requisitos iniciais do projeto
 ├── CLAUDE.md                # Guia de desenvolvimento e atalhos rápidos
 ├── README.md                # Este guia explicativo do projeto
